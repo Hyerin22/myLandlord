@@ -1,0 +1,372 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* ================= FONT SETTING STARTS ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&family=Montserrat:wght@500;600;700&display=swap');
+
+body {
+  font-family: 'Heebo', sans-serif;  
+  margin: 0;
+  padding: 0;
+}
+
+.heading, .subheading, h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.heading {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+  text-align: left;
+}
+
+.subheading, .fsize_24 {
+  font-size: 24px;
+}
+
+P, textarea {
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.bttntxt {
+  font-family: 'Heebo', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.title {
+  font-family: 'Heebo', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.link{
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: underline;
+} 
+
+/* STYLE */
+ul{
+  list-style-type: none;
+} 
+
+a, img, span {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.MuiDataGrid-columnHeaderTitle{
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+}
+
+.MuiPagination-root {
+  font-family: 'Heebo', sans-serif;
+}
+
+.MuiPaginationItem-text{
+  font-family: 'Heebo', sans-serif;
+}
+
+/* PREVIEW PAGE STARTS HERE */
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+
+.header_cont{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0; 
+  padding: 0 1%;
+}
+
+.property_box{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0; 
+  padding: 0 1%;
+  box-sizing: border-box;
+  margin-bottom: 40px; 
+}
+
+.radio_cont, .textarea_cont{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items:space-between;
+  justify-content: flex-start;
+}
+
+.radio_cont > div {
+  margin: 0;
+  margin-bottom: 10px;  
+}
+
+.section_cont {
+  padding: 0 1%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 99%;
+  margin-bottom: 80px;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-padding{
+  padding: 0;
+}
+
+.textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 16px;
+  border-radius: 16px;  
+  border: 3px solid #5333ED;
+  box-sizing: border-box;
+}
+
+#review_list {
+  width: 100%;
+  margin: 0; 
+  padding-inline-start: 0;
+}
+
+#review_list > li {
+  width: 100%;
+  height: 200px;
+}
+
+.thumb_con {
+  width: 100%;
+}
+
+.thumb {
+  width: 20%;  
+  cursor: pointer;
+  font-size: 18px;  
+}
+
+.thumb:first-child{
+  margin-right: 30%;
+}
+
+.thumb_rad {
+  width: 20px; height: 20px;
+  margin-right: 20px;
+}
+
+.thumb > img {
+  margin-right: 20px;
+}
+
+.thumb:hover {
+  color: #5333ED;
+}
+
+.thumb:hover img{
+  transform: scale(0.90);
+  transition-duration: 0.5s; 
+} 
+
+.space-around {
+  align-items: space-around;
+}
+
+.flex-col {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#add_img {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.addImg {
+  width: 18%; 
+  min-width: 200px;
+  min-height: 200px;
+  max-height: 215px;
+  border: 3px solid #5333ED;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.addImg:last-child{
+  margin-right: 0;
+}
+
+.addImg > img{
+  width: 94px; height: auto;
+}
+
+.addImg:hover {
+  transform: scale(0.95);
+  transition-duration: 0.5s; 
+  box-shadow: none;
+}
+
+/* REVIEW PAGE ADDIMG BUTTON */
+#add_img_rev {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.addImg_rev {
+  min-width: 30%; 
+  border: 3px solid #5333ED;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.addImg_rev:last-child{
+  margin-right: 0;
+}
+
+.addImg_rev > img{
+  width: 94px; height: auto;
+}
+
+.addImg_rev:hover {
+  transform: scale(0.95);
+  transition-duration: 0.5s; 
+  box-shadow: none;
+}
+
+.marginB{
+  margin-bottom: 20px;
+}
+
+.flex-start{
+  align-items: flex-start;
+}
+
+.bttn_cont{
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+
+/* AVATAR */
+
+.rec_avatar {
+  display: block;
+  object-fit: cover;
+  width:100%;
+  height: 100%;
+  border-radius: 100px;
+}
+
+/* ================= MEDIA ================= */
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
