@@ -15,10 +15,11 @@ const Nav = styled.div`
 
 const Content = styled.p`
     font-family: 'Heebo', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     position: relative;
     margin-right: 30px;
+    overflow-wrap: break-word;
 
     :before{
         content : "";
@@ -33,6 +34,11 @@ const Content = styled.p`
 
     :hover {
         color:#5333ED; 
+    }
+
+    @media(max-width: 800px){
+        font-size: 15px;
+        margin-right: 16px;
     }
 `;
 

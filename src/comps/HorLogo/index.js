@@ -9,7 +9,11 @@ const LogoCont = styled.div`
     display: flex;
     justify-content: center;
     align-items: ceter;
-    cursor: pointer
+    cursor: pointer;
+
+    @media(max-width: 800px){
+        width: 160px;
+    }
 `;
 
 const Logo = styled.img`

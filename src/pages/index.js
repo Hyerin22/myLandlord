@@ -26,7 +26,6 @@ const Cont = styled.div`
 const NavCont = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 4% 0 4%;
   box-sizing: border-box;
 `;
 
@@ -195,9 +194,9 @@ export default function Home() {
       </FeatSec>
 
       {/* // ============ Bottom Navigation */}
-      {/* <NavCont>
+      <NavCont>
         <Footer />
-      </NavCont> */}
+      </NavCont>
     </Cont>
   );
 }
