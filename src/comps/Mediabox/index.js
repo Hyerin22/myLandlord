@@ -20,6 +20,11 @@ const MediaBox = styled.iframe`
     width: 600px;
     height: 300px;
   }
+
+  @media(max-width: 500px){
+    width: 300px;
+    height: 200px;
+  }
 `
 
 // ============ Function ============== //

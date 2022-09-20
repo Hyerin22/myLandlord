@@ -39,6 +39,7 @@ const FeatCont = styled.div`
   @media(min-width: 1200px){
     min-width: 360px;
 	}
+
 `;
 
 const Img = styled.img`

@@ -15,7 +15,12 @@ const LogoCont = styled.div`
 
   @media(max-width: 1000px){
     margin-right: 30px;
+  }
 
+  @media(max-width: 500px){
+    margin-right: 0;
+    max-width: 130px;
+    // position: absolute;
   }
 `;
 
@@ -25,6 +30,7 @@ const Logo = styled.img`
   display: block;
   object-fit: contain;
   min-width: 150px;
+
 `
 // ============ Function ============== //
 const VerLogo = ({

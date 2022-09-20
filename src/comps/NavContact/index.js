@@ -25,7 +25,10 @@ const Content = styled.p`
     font-size: 17px;
     white-space: nowrap;
     overflow-wrap: break-word;
+  }
 
+  @media(max-width: 500px){
+    font-size: 14px;
   }
 
   :before{

@@ -88,9 +88,12 @@ const FeatCont = styled.div`
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-column-gap: 15px;
-		
 		padding: 0px 40px;
 	}
+
+  @media(max-width: 500px){
+    display: grid;
+  }
 `;
 
 const WelcomeText = styled.p`

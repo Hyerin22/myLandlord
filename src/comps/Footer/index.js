@@ -25,6 +25,10 @@ const Upside = styled.div`
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+
+  @media(max-width: 500px){
+    justify-content: center;
+  }
 `;
 const Nav = styled.div`
   width: 100%;
@@ -40,6 +44,10 @@ const NavText = styled.div`
 const LogoPart = styled.div`
   display: flex;
   margin-bottom: 13px;
+
+  @media(max-width: 500px){
+    display: none;
+  }
 `;
 
 const Line = styled.div`

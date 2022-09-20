@@ -29,6 +29,11 @@ const Cont = styled.div`
   @media (max-width: 1000px) {
     width: 100%;
 	}
+
+  @media(max-width: 500px){
+    flex-direction: column;
+    margin-top: 60px;
+  }
 `
 const NavCont = styled.div`
   width:100%;
@@ -44,8 +49,15 @@ const LeftBar =styled.div`
 const RightBar = styled.div`
   display:flex;
   flex: 1;
-  align-items:center;
+  align-items: center;
   justify-content: flex-end;
+
+  @media(max-width: 500px){
+    width: 100px;
+    height: 100px;
+    align-itmes: center;
+    margin-left: 15px;
+  }
 `
 
 // ============ Function ============== //

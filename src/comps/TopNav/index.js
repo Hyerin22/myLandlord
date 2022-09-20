@@ -22,7 +22,6 @@ const Cont = styled.div`
   z-index: 999;
   margin-bottom: ${props => props.cmarginB}px;
 
-
 `
 const Nav = styled.div`
   // width:100%;

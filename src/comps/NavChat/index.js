@@ -24,6 +24,10 @@ const Content = styled.p`
     font-size: 17px;
   }
 
+  @media(max-width: 500px){
+    font-size: 14px;
+  }
+
   :before{
     content : "";
     position: absolute;
