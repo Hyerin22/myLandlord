@@ -10,8 +10,8 @@ import SubHead from "../SubHead"
 
 // ============ CSS ============== //
 const ImgCont = styled.div`    
-  width: ${props=>props.cwidth};
-  height: ${props=>props.cheight}px;
+  width: 100%;
+  height: 650px;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -24,30 +24,44 @@ const ImgCont = styled.div`
 `;
 
 const Letterbox = styled.div`
-  width: 40%;
+  width: 50%;
   height: 100%;
   position: absolute;
   top: 0;
-  right: 0;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 110px 0 40px;
   box-sizing: border-box;
+  
+  @media(min-width: 1000px){
+    padding: 0px 110px 0 40px;
+    right: 0px;
+  }
 `
+
+const Text = styled.p`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  overflow-wrap: break-word;
+  margin-bottom: 30px;
+
+  @media(max-width: 1000px){
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+`;
 // ============ Function ============== //
 const HeroImage = ({
 
 // ============ Properties
-  cwidth ="100%",
-  cheight = "650",
   imgurl="./images/img_home.svg",
 
 }) => {
-
-// ============ Router
-  const router = useRouter();
 
 // ============ UseEffect - animation
 useEffect(() => {
@@ -57,25 +71,16 @@ useEffect(() => {
   // ============ Layout
   return (
     <ImgCont
-      cwidth={cwidth}
-      cheight={cheight}
       imgurl={imgurl}
       data-aos="fade-right"
       data-aos-once="true"
     >
       <Letterbox>
-        <SubHead 
-          text = "Share your experiences with landlord with us"
-          fontWeight = "500"
-          align="center"
-          marginB="30"
-        />
+        <Text>Share your experiences with landlord with us</Text>
 
         <RoutButton
           routeTo = "/Landlord"
           text="View the Landlord List"
-          height="60"
-          width = "395"
           margintop = "0"
           bgcolor = "#5333ED"
           border = "none"

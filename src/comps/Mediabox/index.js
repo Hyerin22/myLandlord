@@ -13,8 +13,13 @@ const MedCont = styled.div`
 `;
 
 const MediaBox = styled.iframe`
-  width: 750px;
-  height: 423px;
+  width: 550px;
+  height: 323px;
+
+  @media(max-width: 1000px){
+    width: 600px;
+    height: 300px;
+  }
 `
 
 // ============ Function ============== //

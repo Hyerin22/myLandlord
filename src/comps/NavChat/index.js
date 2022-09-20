@@ -4,7 +4,7 @@ import {useRouter} from 'next/router';
 
 // ============ CSS ============== //
 const Nav = styled.div`    
-  height: ${props=>props.height}px;
+  height: 114px;
   margin-right: ${props=>props.mright}px;
   box-sizing: border-box;
   display: flex;
@@ -15,11 +15,14 @@ const Nav = styled.div`
 
 const Content = styled.p`
   font-family: 'Heebo', sans-serif;
-  font-size: ${props=>props.pSize}px;
-  height: ${props=>props.pHeight}%;
-  font-weight: ${props=>props.pWeight};
+  font-size: 24px;
+  font-weight: 400;
   position: relative;
   color: ${props=>props.pColor};
+
+  @media (max-width: 1000px) {
+    font-size: 17px;
+  }
 
   :before{
     content : "";
@@ -54,11 +57,7 @@ const Content = styled.p`
 const NavChat =({
 
 // ============ Props  
-  height = 114,
   marginright = "",
-  pSize = 24,
-  pWeight = 400,
-  pHeight = 40,
   pColor="",
   beforeWidth="0%",
   chatClick=()=>{}
@@ -92,13 +91,9 @@ const NavChat =({
     <Nav 
       mright={marginright} 
       // onClick={() => router.push("/Chat")}
-      height={height}
       onClick={chatClick}
     >
       <Content               
-        pSize={pSize}
-        pWeight={pWeight}
-        pHeight={pHeight}
         pColor={pColor}
         beforeWidth={beforeWidth}
       >

@@ -25,6 +25,10 @@ const Cont = styled.div`
   box-sizing: border-box;
   z-index: 999;
   margin-bottom: ${props => props.cmarginB}px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+	}
 `
 const NavCont = styled.div`
   width:100%;
@@ -33,11 +37,9 @@ const NavCont = styled.div`
 `
 
 const LeftBar =styled.div`
-  display:flex;
-  flex-direction: row;
-  flex: 1.5;
-  align-items:center;
-  justify-content:space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
 `
 const RightBar = styled.div`
   display:flex;
@@ -65,14 +67,10 @@ const Navi =({
 // ============ Layout
   return (
     <Cont cpadding={cpadding} cmarginB={cmarginB} >
-      <VerLogo 
-        marginright= "83"
-        minwidth = "150px"
-      />
+      <VerLogo />
       
       <NavCont>
         <LeftBar>
-
           <NavHome />  
           <NavLandlord />
           <NavChat chatClick={chatClick}/>
