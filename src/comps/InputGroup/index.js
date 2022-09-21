@@ -240,8 +240,8 @@ const InputGroup = ({
             minWidth="400"
             routeTo="/"
             justify="flex-end"
-          /> */}
-          {/* <Button
+          />
+          <Button
             text="Submit"
             margintop="0px"
             border="none"

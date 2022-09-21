@@ -19,6 +19,7 @@ const Cont = styled.div`
 	margin: 0;
 	padding: 0 4% 0 4%;
   box-sizing: border-box;
+  align-items: center;
 `
 const ErrorCont = styled.div`
   display:flex;

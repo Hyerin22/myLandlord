@@ -72,6 +72,10 @@ const ContRight = styled.div`
   flex: 1;
   align-items: flex-end;
   justify-content: center;
+
+  @media(max-width: 1300px){
+    display: none;
+}
 `
 
 const CheckCont = styled.div`
@@ -85,10 +89,16 @@ const CheckCont = styled.div`
   box-sizing: border-box;
 `
 const BttnCont = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  margin-top: 30px;
 `
+
 // ============ Function ============== //
 // ============ Layout
 export default function SignUp() {
@@ -154,7 +164,14 @@ export default function SignUp() {
               margintop = "0px"
               routeTo = "/"
             />
-            <Button
+            <RoutButton 
+              text="Submit"
+              margintop = "0px"
+              color='#ffffff'
+              bgcolor='#5333ED'
+              routeTo = "/"
+            />
+            {/* <Button
               text = "Submit"
               margintop = "0px"
               border = "none"
@@ -162,7 +179,7 @@ export default function SignUp() {
               color="#fff"
               hover = "box-shadow: none"
               width = "95%"
-            />
+            /> */}
           </BttnCont>
         </ContLeft>
 

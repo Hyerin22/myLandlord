@@ -20,6 +20,8 @@ const Cont = styled.div`
     flex-direction: column;
     padding: 0 4% 0 4%;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
 `;
 
 const ErrorCont = styled.div`
@@ -55,7 +57,18 @@ const ContRight = styled.div`
     align-items: flex-end;
     justify-content: center;
     box-sizing: border-box;
+
+    @media(max-width: 1300px){
+        display: none;
+    }
 `
+
+const LogInCont = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    margin-top: 30px;
+`;
 
 // ============ Function ============== //
 // ============ Layout
@@ -94,12 +107,19 @@ export default function LogIn() {
                 <ContLeft>
                     <Input title="Email" type ="email"/>
                     <Input title="Password" type="password"/>
-                    <Button text="Log In"/>
-                    <RoutButton 
-                        text="Cancel"
-                        margintop={50}
-                        routeTo = "/"
-                    />
+                    {/* <Button text="Log In"/> */}
+                    <LogInCont>
+                        <RoutButton 
+                            text="Log In"
+                            margintop={0}
+                            routeTo = "/"
+                        />
+                        <RoutButton 
+                            text="Cancel"
+                            margintop={0}
+                            routeTo = "/"
+                        />
+                    </LogInCont>
                     <Divider />
                     <RoutButton 
                         text="Sign Up"

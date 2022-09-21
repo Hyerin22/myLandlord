@@ -16,7 +16,11 @@ const Line = styled.div`
     width:15%;
     margin-right: 5%;
     margin-left: 5%;
-    `;
+    
+    @media(max-width: 500px){
+        width:7%;
+    }
+`;
 
 const DividerText = styled.p`
     color:#757373;
@@ -24,6 +28,10 @@ const DividerText = styled.p`
     font-weight:400;
     margin-top:30px;
 
+    @media(max-width: 500px){
+        font-size: 20px;
+        margin: 0;
+    }
 `;
 
 // ============ Function ============== //

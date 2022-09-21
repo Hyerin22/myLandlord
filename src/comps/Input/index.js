@@ -22,11 +22,15 @@ const FormBox = styled.div`
 `
 
 const LabelFor = styled.label`
-  font-size: ${props => props.fsize}px; 
+  font-size: 24px; 
   font-family: Montserrat;
   margin-bottom: 10px;
   margin-left: 20px;
   font-weight:600;
+
+  @media(max-width: 500px){
+    font-size: 20px;
+  }
 `;
 
 const InputBox = styled.input`
@@ -46,7 +50,6 @@ const Input = ({
   title = "Email",
   fwidth = "100%",
   fheight = "100%",
-  fsize = 24,
   iwidth = "100%",
   iheight = 57,
   type ="text"
@@ -63,7 +66,6 @@ const Input = ({
       >
         <LabelFor 
           for={title} 
-          fsize = {fsize}
         > {title}</LabelFor>
         <InputBox 
           type={type} 

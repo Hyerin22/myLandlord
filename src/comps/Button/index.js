@@ -26,6 +26,11 @@ const ButtonInput = styled.button`
     justify-content:center;
     box-shadow: ${props=>props.bshadow}; 
     cursor: pointer;
+
+    @media(max-width: 500px){
+        width: 150px;
+        height: 50px;
+    }
     
     :hover{
         transform: scale(0.85);

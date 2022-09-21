@@ -19,6 +19,7 @@ const Cont = styled.div`
   padding: 0 68px 0 68px;
   margin-bottom: 50px;
   margin-top: 130px;
+  max-width: 1400px;
 `;
 const Upside = styled.div`
   display: flex;
@@ -62,6 +63,9 @@ const Line = styled.div`
     width: 600px;
   }
   @media (min-width: 1000px) {
+    width: 800px;
+  }
+  @media (min-width: 1400px) {
     width: 1300px;
   }
 `;
