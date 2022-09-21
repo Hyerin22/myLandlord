@@ -5,12 +5,15 @@ import { useRouter } from 'next/router'
 // ============ CSS ============== //
 const Nav = styled.div`
     height: ${props=>props.height}px;
-    margin-right: ${props=>props.mright}px;
     box-sizing: border-box;
     display: flex;
     align-items:center;
     justify-content:center;
     cursor: pointer; 
+
+    @media(max-width: 500px){
+        margin-right: 0px;
+    }
 `;
 
 const Content = styled.p`
@@ -19,7 +22,7 @@ const Content = styled.p`
     font-weight: 400;
     position: relative;
     margin-right: 30px;
-    overflow-wrap: break-word;
+    white-space: nowrap
 
     :before{
         content : "";
@@ -40,13 +43,15 @@ const Content = styled.p`
         font-size: 15px;
         margin-right: 16px;
     }
+    @media(max-width: 500px){
+        font-size: 14px;
+    }
 `;
 
 // ============ Function ============== //
 const FooterNav = ({
 // ============ Props
     height = 50,
-    mright = "30px",
     text="Home",
     routeTo = "/Home"
 }) => {
@@ -55,7 +60,7 @@ const FooterNav = ({
 
 // ============ Layout
     return(
-        <Nav height={height} mright={mright} onClick={() => router.push(routeTo)}>
+        <Nav height={height} onClick={() => router.push(routeTo)}>
             <Content>{text}</Content>
         </Nav>
 

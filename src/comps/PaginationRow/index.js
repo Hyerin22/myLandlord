@@ -11,6 +11,10 @@ const Cont = styled.div`
   justify-content: center;
 	align-items: center;
 	margin: 0;
+
+  @media(max-width: 500px){
+    display: none;
+  }
 `
 
 // ============ Function ============== //
@@ -69,11 +73,11 @@ const PaginationRow = ({
               fontFamily: '"Heebo", sans-serif',
               width: {width},
               ":nth-child(2)":{
-                marginRight: 20,
+                marginRight: 0,
               },
 
               ":nth-child(10)":{
-                marginLeft: 20,
+                marginLeft: 0,
               }
             },
 

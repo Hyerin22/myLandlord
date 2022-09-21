@@ -14,11 +14,19 @@ const HeaderCont = styled.div`
 
 const Text = styled.p`
 	font-family: 'Montserrat', sans-serif;
-	font-size: ${props=>props.fontSize};
+	font-size: 50px;
 	margin-bottom:${props=>props.marginBottom};
 	margin-left:${props=>props.marginLeft};
 	font-weight: 500;
 	color:#000;
+
+	@media(max-width: 1000px){
+    font-size: 40px
+  }
+
+  @media(max-width: 500px){
+		font-size: 30px;
+  }
 `;
 
 // ============ Function ============== //
@@ -28,7 +36,6 @@ const Header = ({
 	cwidth="100%",
 	cMinWidth = "400px",
 	text="Log In",
-	fontSize="50px",
 	justifyContent="flex-start",
 	alignItems="center",
 	marginLeft="1%",
@@ -43,7 +50,7 @@ const Header = ({
 			justifyContent={justifyContent} 
 			alignItems={alignItems} 
 		>
-			<Text fontSize={fontSize}
+			<Text
 					marginLeft={marginLeft}
 					marginBottom={marginBottom}>
 				{text}

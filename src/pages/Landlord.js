@@ -50,6 +50,23 @@ const MidCont = styled.div`
 	margin-bottom: ${props=>props.cmarginB}; 
 `
 
+const SubText = styled.p`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #000;
+  text-align : left;
+  margin: 0;
+  overflow-wrap: break-word;
+  margin-left: 2%;
+  margin-bottom: 40px;
+
+  @media(max-width: 500px){
+    font-size: 22px;
+  }
+`;
+
+
 // ============ Function ============== //
 const Landlord = ({
 
@@ -90,12 +107,7 @@ const Landlord = ({
             />}
           </ErrorCont>
         </HeadCont>
-        <SubHead 
-          marginB = "40"
-          justifyContent="left"
-          text="Which area do you want to search?"
-          marginL="2%"
-        />
+        <SubText>Which area do you want to search?</SubText>
         <SearchBar marginL="2"/>
 
 {/* it is a image with img tag */}
@@ -113,12 +125,8 @@ const Landlord = ({
         <HeadCont flexDir={flexDir}>
           <Header text="List of Landlord" cMinWidth = "600px" marginBottom = "40px"/>
         </HeadCont>
-        <SubHead 
-          marginB = "40"
-          justifyContent="left"            
-          text="Who do you want to search?"
-          marginL="2%"
-        />
+
+        <SubText>Who do you want to search?</SubText>
         <SearchBar
           placeholder="Please type your landlord name or address.."
           marginL="2"
