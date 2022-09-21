@@ -10,12 +10,16 @@ const Cont = styled.div`
 `;
 
 const Sub = styled.p`
-    font-size: ${props=>props.fontSize};
+    font-size: 36px;
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 36px;
     color: #2F281E;
     font-family: 'Montserrat', sans-serif;
+
+    @media(max-width: 1000px){
+        font-size: 25px;
+    }
 `;
 
 const Line = styled.div`
@@ -34,14 +38,13 @@ const DisplayRow = styled.div`
 const ProfileSub = ({
 // ============ Props
     text="Properties",
-    fontSize="36px"
 }) => {
 
 // ============ Layout
     return(
         <Cont>
             <DisplayRow>
-                <Sub fontSize={fontSize}>
+                <Sub>
                     {text}
                 </Sub>
                 <Line />

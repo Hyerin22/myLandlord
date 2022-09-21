@@ -14,7 +14,7 @@ const HeaderCont = styled.div`
 
 const Text = styled.p`
 	font-family: 'Montserrat', sans-serif;
-	font-size: 50px;
+	font-size: 45px;
 	margin-bottom:${props=>props.marginBottom};
 	margin-left:${props=>props.marginLeft};
 	font-weight: 500;

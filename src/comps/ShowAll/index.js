@@ -11,7 +11,7 @@ const ContButt = styled.div`
 
 const TextButt = styled.a`
     border:none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: #000000;
     cursor: pointer;

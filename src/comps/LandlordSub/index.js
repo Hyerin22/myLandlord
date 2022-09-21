@@ -11,11 +11,12 @@ const SubCont = styled.div`
 
 const Sub = styled.p`
     font-family: Montserrat;
-    font-size: 36px;
-    font-weight:500;
+    font-size: 25px;
+    font-weight:400;
     color: #6E7076;
     margin-top: 0px;
     margin-left:1%;
+    white-space: nowrap;
 `;
 
 // ============ Function ============== //

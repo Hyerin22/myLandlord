@@ -4,8 +4,8 @@ import {useRouter} from 'next/router';
 
 // ============ CSS ============== //
 const Cont = styled.button`
-  width:${props => props.cwidth}px;
-  height: ${props => props.cwidth}px;
+  width:74px;
+  height: 74px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,16 +14,22 @@ const Cont = styled.button`
   background-color: #ffffff;
   border: solid 1px #5333ED;
   box-sizing: border-box;
-
+  
+  @media(max-width:1000px){
+    width: 64px;
+    height: 64px;
+  }
+  
   :hover{
     transform: scale(0.95);
     transition-duration: 0.5s;       
+
 }
 `
 
 const Img = styled.img`
-  width:${props => props.width};
-  height: ${props => props.width};
+  width:70%;
+  height: ${props => props.height};
   display: block;
   object-fit: ${props => props.objectFit};  
 `
@@ -32,13 +38,11 @@ const Img = styled.img`
 // ============ Props
 const ChatIcon = ({
 // container 
-  cwidth = 84,
   routeTo = "/Chat",
 
 // image
   src = "./icons/icon_chat.svg",
   alt = "image box",
-  width = "70%",
   objectFit = "contain",  
 
 }) => {
@@ -52,12 +56,10 @@ const ChatIcon = ({
 
 // ============ Router
         onClick={()=>router.push(routeTo)}
-        cwidth={cwidth}
       >
         <Img
           src={src}
           alt={alt}
-          width={width}
           objectFit={objectFit} 
         />
       </Cont>

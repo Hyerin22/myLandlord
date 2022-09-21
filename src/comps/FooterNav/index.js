@@ -22,7 +22,7 @@ const Content = styled.p`
     font-weight: 400;
     position: relative;
     margin-right: 30px;
-    white-space: nowrap
+    white-space: nowrap;
 
     :before{
         content : "";

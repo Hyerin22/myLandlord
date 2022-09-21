@@ -20,6 +20,7 @@ const Icon = styled.img`
     display:block;
     object-fit: cover;
     margin-right: 20px;
+
 `;
 
 const Info = styled.p`
@@ -27,6 +28,14 @@ const Info = styled.p`
     font-weight: 600;
     color: #000000;
     font-size: 24px;
+  
+    @media(max-width:1000px){
+        font-size: 20px;
+    }
+    @media(max-width:500px){
+        font-size: 18px;
+    }
+
 `;
 
 

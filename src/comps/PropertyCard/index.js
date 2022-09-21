@@ -9,23 +9,26 @@ const BoxCont = styled.div`
 `;
 
 const Box = styled.div`
-    width: 1100px;
+    width: 1000px;
     height: 245px;
     border: 3px solid #5333ED;
     background: none;
     border-radius: 16px;
+
+    @media(max-width:1000px){
+        width: 700px;
+        // height: auto;
+    }
 `;
 
 const Cont = styled.div`
-    width:${props => props.cwidth};
-    height: ${props => props.cheight}px;
     position: relative;  
     display: flex;
     
 `
 const Img = styled.img`
-    width:${props => props.width};
-    height: ${props => props.height};
+    width: 196px;
+    height: 130px;
     margin-left: 4%;
     margin-top: 11%;
 `;
@@ -42,7 +45,14 @@ const BoldText = styled.p`
     color: #000000;
     margin-bottom: 3px;
     font-family: Heebo;
-    margin-top:${props => props.marginTop};
+    margin-top: ${props => props.marginTop};
+
+    @media(max-width:1000px){
+        font-size: 20px;
+    }
+    @media(max-width: 500px){
+        font-size: 18px;
+    }
 `;
 const RegText = styled.p`
     font-weight: 400;
@@ -50,37 +60,43 @@ const RegText = styled.p`
     color: #000000;
     margin: 5px;
     font-family: Heebo;
+    white-space: nowrap;
+
+    @media(max-width: 500px){
+        font-size: 18px;
+    }
 `;
 
 const LeftSide = styled.div`
     display:flex;
-    flex:1;
+    // flex:1;
 `;
 const RightSide = styled.div`
     display:flex;
-    flex:1;
+    // flex:1;
 `;
 
 const DateTextCont = styled.div`
     margin-top: 5%;
-    margin-left: 65%;
+    margin-left: 75%;
 `;
 const DateText = styled.p`
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     color: #000000;
     margin-bottom: 3px;
     font-family: Heebo, sans-serif;
+    white-space: nowrap;
+
+    @media(max-width: 500px){
+        font-size: 16px;
+    }
 `;
 
 // ============ Function ============== //
 const PropertyCard = ({
 // ============ Props
     src= "./images/property1.png",
-    width= "196px",
-    height="130px",
-    cwidth = "100%",
-    cheight = 300,
     bold="5435 Kincaid St",
     boldDate="19 Jan 2017 19:01",
     regT1= "8 Rooms, 3 Bath",
@@ -95,9 +111,9 @@ const PropertyCard = ({
     return (
         <BoxCont>
             <Box>
-                <Cont cwidth={cwidth} cheight={cheight}>
+                <Cont>
                     <LeftSide>
-                        <Img src={src} width={width} height={height} />
+                        <Img src={src} />
                         <TextCont>
                             <BoldText>{bold}</BoldText>
                             <RegText>{regT1}</RegText>
