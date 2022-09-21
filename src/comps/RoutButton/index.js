@@ -32,6 +32,10 @@ const ButtonInput = styled.button`
         width: 300px;
         height: 50px;
     }
+    @media(max-width:500px){
+        width: 150px;
+        height: 50px;
+    }
 `;
 
 const ButtonText = styled.p`

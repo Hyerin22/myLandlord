@@ -1,243 +1,263 @@
-import styled from 'styled-components';
-import React from 'react';
-import TextareaAutosize from '@mui/material/TextareaAutosize'
+import styled from "styled-components";
+import React from "react";
+import TextareaAutosize from "@mui/material/TextareaAutosize";
 
 // ============ Imported Comps ============== //
-import Button from '../Button'
-import Para from '../Para'
-import ImgBox from '../ImgBox'
+import Button from "../Button";
+import Para from "../Para";
+import ImgBox from "../ImgBox";
+import RoutButton from "../RoutButton";
 
 // ============ CSS ============== //
 const Cont = styled.div`
-  width: ${props => props.cwidth};
-  display:flex;
+  width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+`;
 
-const TopCont =styled.div`
-  display:flex;  
+const TopCont = styled.div`
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
   flex-wrap: wrap;
   box-sizing: border-box;
-`
 
-const LeftCont=styled.div`
-  display:flex;
+  @media (max-width: 1000px) {
+    display: block;
+  }
+`;
+
+const LeftCont = styled.div`
+  display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-right: 50px;
-`
 
-const RightCont=styled.div`
-  display:flex;
+  @media (max-width: 1000px) {
+    margin-right: 0;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 500px) {
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const RightCont = styled.div`
+  display: flex;
   flex: 1.5;
   flex-direction: column;
   align-items: felx-start;
   justify-content: center;
-`
+
+  @media (max-width: 500px) {
+    margin-right: 0;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
 // ============ Form
 const FormBox = styled.form`
-  width:${props => props.fwidth};
-  height: ${props => props.fheight}; 
-  display:flex;
+  width: 100%;
+  height: 100%;
+  display: flex;
   flex-direction: column;
   align-items: felx-start;
-  justify-content: center;   
-`
+  justify-content: center;
+`;
 
 const LabelFor = styled.label`
-  font-size: ${props => props.fsize}px; 
-  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 10px;
   margin-left: 20px;
-  font-weight:600;
+  font-weight: 600;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+    margin: 0px 0px 10px 0px;
+  }
 `;
 
 const InputBox = styled.input`
-  width:${props => props.iwidth};
-  height: ${props => props.iheight}px; 
+  width: 100%;
+  height: 57px;
   border-radius: 20px;
-  border: 3px solid #5333ED;
+  border: 3px solid #5333ed;
   font-size: 24px;
   padding: 16px;
   box-sizing: border-box;
-  margin-bottom: ${props => props.imarginB}px;
+  margin-bottom: 40px;
   ::-webkit-input-placeholder {
-    font-family: 'Heebo', sans-serif;
+    font-family: "Heebo", sans-serif;
     font-size: 16px;
     font-weight: 400;
   }
-`
+
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
+`;
 
 const BttnCont = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 80px;
-`
+  align-items: center;
+
+  @media (max-width: 500px) {
+    // flex-direction: column;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
 // ============ Function ============== //
 const InputGroup = ({
-  
-// ============ Properties
-  cwidth = "100%",  
-  fwidth = "100%",
-  fheight = "100%",
-  fsize = 24,
-  iwidth = "100%",
-  iheight = 57,
+  // ============ Properties
   placeholder = "Type here...",
 
-// ===========Input titles
+  // ===========Input titles
   titleOne = "First Name",
-  typeOne ="text",
+  typeOne = "text",
   titleTwo = "Last Name",
-  typeTwo ="text",
+  typeTwo = "text",
   titleThree = "Email address",
-  typeThree ="text",
+  typeThree = "text",
   titleFour = "Phone Number (Optional)",
-  typeFour ="text",
-  titleFive="Let us know what your issue is",
-  imarginB ="40",
-
-}) => {  
-// ============ Layout
-	return(
-		<Cont
-      cwidth={cwidth}
-    >
-      <FormBox 
-        fwidth={fwidth} 
-        fheight={fheight}
-      >
-        <TopCont> 
-{/* // ============ Image */}
-          <LeftCont> 
-            <ImgBox 
+  typeFour = "text",
+  titleFive = "Let us know what your issue is",
+}) => {
+  // ============ Layout
+  return (
+    <Cont>
+      <FormBox>
+        <TopCont>
+          {/* // ============ Image */}
+          <LeftCont>
+            <ImgBox
               src="./images/ani_ContactUs.gif"
-              cheight ="100%"
-              cwidth = "100%"
-              cmargin = "0 60px 0 0"
+              cheight="100%"
+              cwidth="100%"
+              cmargin="0 60px 0 0"
             />
           </LeftCont>
 
-{/* // ============ Inputs */}
-          <RightCont> 
-            <LabelFor 
-              for={titleOne} 
-              fsize = {fsize}
-            > {titleOne}</LabelFor>
-            <InputBox 
-              type={typeOne} 
-              name={titleOne} required 
-              iwidth={iwidth} 
-              iheight={iheight}
+          {/* // ============ Inputs */}
+          <RightCont>
+            <LabelFor for={titleOne}> {titleOne}</LabelFor>
+            <InputBox
+              type={typeOne}
+              name={titleOne}
+              required
               placeholder={placeholder}
-              imarginB={imarginB}              
             />
 
-            <LabelFor 
-              for={titleTwo} 
-              fsize = {fsize}
-            > {titleTwo}</LabelFor>
-            <InputBox 
-              type={typeTwo} 
-              name={titleTwo} required 
-              iwidth={iwidth} 
-              iheight={iheight}
+            <LabelFor for={titleTwo}> {titleTwo}</LabelFor>
+            <InputBox
+              type={typeTwo}
+              name={titleTwo}
+              required
               placeholder={placeholder}
-              imarginB={imarginB}
             />
 
-            <LabelFor 
-              for={titleThree} 
-              fsize = {fsize}
-            > {titleThree}</LabelFor>
-            <InputBox 
-              type={typeThree} 
-              name={titleThree} required 
-              iwidth={iwidth} 
-              iheight={iheight}
+            <LabelFor for={titleThree}> {titleThree}</LabelFor>
+            <InputBox
+              type={typeThree}
+              name={titleThree}
+              required
               placeholder={placeholder}
-              imarginB={imarginB}
             />
 
-            <LabelFor 
-              for={titleFour} 
-              fsize = {fsize}
-            > {titleFour}</LabelFor>
-            <InputBox 
-              type={typeFour} 
-              name={titleFour} required 
-              iwidth={iwidth} 
-              iheight={iheight}
+            <LabelFor for={titleFour}> {titleFour}</LabelFor>
+            <InputBox
+              type={typeFour}
+              name={titleFour}
+              required
               placeholder={placeholder}
             />
-          </RightCont>          
+          </RightCont>
         </TopCont>
 
-{/* // ============ Textarea */}
-        <LabelFor 
-          for={titleFive} 
-          fsize = {fsize}
-        > {titleFive}</LabelFor>
+        {/* // ============ Textarea */}
+        <LabelFor for={titleFive}> {titleFive}</LabelFor>
         <TextareaAutosize
           maxRows={10}
           minRows={8}
           aria-label="maximum height"
           placeholder="Type here..."
-          style={{ 
-            width: "100%", 
-            padding: "20px", 
-            boxSizing: "border-box"
+          style={{
+            width: "100%",
+            padding: "20px",
+            boxSizing: "border-box",
           }}
-        />   
-        <Para 
-          fontSize="20"
+        />
+        <Para
+          fontSize="18"
           text="250 words max"
           align="right"
           fcolor="#6E7076"
           marginT="5"
-        />     
+          paddingR="10"
+        />
 
-{/* // ============ Buttons */}
-      <BttnCont>
-        <Button 
-          type ="cancel"
-          text = "Cancel"
-          margintop = "0px"
-          cwidth ="48%"
-          width = "95%"
-          marginright="30"
-          minWidth="400"
-          routeTo="/"
-          justify="flex-end"
-        />
-        <Button 
-          text = "Submit"
-          margintop = "0px"
-          border = "none"
-          bgcolor = "#5333ED"
-          color="#fff"
-          hover = "box-shadow: none"
-          cwidth ="48%"
-          width = "95%"
-          minWidth="400"
-          routeTo=""
-          justify="flex-start"
-        />
-      </BttnCont>
+        {/* // ============ Buttons */}
+        <BttnCont>
+          <RoutButton
+            text="Cancel"
+            bgcolor="#ffffff"
+            color="black"
+            margintop={0}
+            routeTo="/SignUp"
+          />
+          <RoutButton
+            text="Submit"
+            color="#ffffff"
+            bgcolor="#5333ED"
+            margintop={0}
+            routeTo="/SignUp"
+          />
+          {/* <Button
+            type="cancel"
+            text="Cancel"
+            margintop="0px"
+            cwidth="48%"
+            width="95%"
+            marginright="30"
+            minWidth="400"
+            routeTo="/"
+            justify="flex-end"
+          /> */}
+          {/* <Button
+            text="Submit"
+            margintop="0px"
+            border="none"
+            bgcolor="#5333ED"
+            color="#fff"
+            hover="box-shadow: none"
+            cwidth="48%"
+            width="95%"
+            minWidth="400"
+            routeTo=""
+            justify="flex-start"
+          /> */}
+        </BttnCont>
       </FormBox>
-    </Cont>   
-	)
-}
+    </Cont>
+  );
+};
 
 export default InputGroup;

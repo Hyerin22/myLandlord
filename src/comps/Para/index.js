@@ -10,9 +10,9 @@ const Text = styled.p`
 	color: ${props=>props.fcolor};	
 	text-align: ${props=>props.align};
 	line-height: ${props=>props.lineHeight};
-	margin:0;
 	margin-bottom: ${props=>props.marginB}px;
 	margin-top: ${props=>props.marginT}px;
+	padding-right: ${props=>props.paddingR}px;
 `;
 
 // ============ Function ============== //
@@ -28,6 +28,7 @@ const Para = ({
 	lineHeight = "1.5em",
 	marginB="",
 	marginT="",
+	paddingR =""
 }) => {
 
 
@@ -42,6 +43,7 @@ const Para = ({
       lineHeight={lineHeight}
       marginB={marginB}
 			marginT={marginT}
+			paddingR = {paddingR}
     >
       {text}
     </Text>

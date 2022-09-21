@@ -62,7 +62,7 @@ const Line = styled.div`
     width: 600px;
   }
   @media (min-width: 1000px) {
-    width: 900px;
+    width: 1300px;
   }
 `;
 

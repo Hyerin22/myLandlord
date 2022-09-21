@@ -21,7 +21,7 @@ const Text = styled.p`
 	color:#000;
 
 	@media(max-width: 1000px){
-    font-size: 40px
+    font-size: 35px
   }
 
   @media(max-width: 500px){

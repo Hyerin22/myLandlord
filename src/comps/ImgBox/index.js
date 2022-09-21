@@ -3,7 +3,7 @@ import React from 'react';
 
 // ============ CSS ============== //
 const Cont = styled.div`
-  width:${props => props.cwidth};
+  // width:${props => props.cwidth};
   height: ${props => props.cheight};
   position: relative;  
   display: flex;
