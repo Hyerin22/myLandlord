@@ -10,13 +10,11 @@ import FullName from '../comps/FullName';
 import Input from '../comps/Input';
 import Checkbox from '../comps/Checkbox';
 
-import VeriButton from '../comps/VeriButton';
 import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button';
 import Header from '../comps/Header';
 import Navi from '../comps/Navi';
 import Footer from '../comps/Footer';
-import signup from "../scripts/auth/signup";
 import RoutButton from '../comps/RoutButton';
 import LoginErrorBox from '../comps/LoginErrorBox';
 
@@ -28,6 +26,8 @@ const Cont = styled.div`
   flex-direction: column;
   padding: 0 4% 0 4%;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 `
 
 const ErrorCont = styled.div`

@@ -10,6 +10,15 @@ const HeaderCont = styled.div`
 	justify-content:${props=>props.justifyContent};
 	align-items:${props=>props.alignItems};
 	white-space: nowrap;
+
+	@media(max-width: 1200px){
+    white-space: normal;
+  }
+
+  @media(max-width: 500px){
+		white-space: normal;
+  }
+
 `;
 
 const Text = styled.p`
@@ -21,11 +30,13 @@ const Text = styled.p`
 	color:#000;
 
 	@media(max-width: 1000px){
-    font-size: 35px
+		margin-bottom: 10px;
+    font-size: 30px
   }
 
   @media(max-width: 500px){
-		font-size: 30px;
+		font-size: 20px;
+		margin-bottom: 10px;
   }
 `;
 

@@ -25,6 +25,7 @@ const Cont = styled.div`
 `;
 
 const HeadCont = styled.div`
+    padding: 4%;  
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -59,6 +60,14 @@ const VeriCont = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 140px;
+
+    @media(max-width: 1000px){
+        margin-top: 80px;
+      }
+      
+      @media(max-width: 500px){
+        margin-top: 30px;
+      }
 `;
 
 const CenterBox = styled.div`
@@ -66,6 +75,11 @@ const CenterBox = styled.div`
     margin-top: 50px;
     justify-content: center;
     align-items:center;
+    padding: 0 4%;
+
+    @media(max-width: 500px){
+        margin-top: 30px;
+      }
 `;
 
 const ReviewCont = styled.div`
@@ -75,15 +89,18 @@ const ReviewCont = styled.div`
 `;
 
 const IconCont = styled.a`
-    display: block;
+    display: flex;
     justify-content:center;
+    margin-left: 30px;
     align-items:center;
     width: 84px;
     height: 84px;
     border-radius: 50%; 
-    overflow: hidden;
+    overflow: visible;
     bottom: 30px;
     right: 0px;
+
+
 
     :hover{
         transform: scale(0.95);
@@ -98,6 +115,10 @@ const Icon = styled.img`
     width: 84px;
     height: 84px;
     border-radius: 50%;  
+
+    @media(max-width:1000px){
+        width: 64px;
+    }
 `
 
 // ============ Function ============== //
@@ -125,7 +146,7 @@ export default function LandlordMypage() {
             <InfoCont>
                 <RetangleAvatar/>
                 <InfoText>
-                    <SubHead text="Burnaby, BC." fontSize="24" justifyContent="left" marginB="10"/>
+                    <SubHead text="Burnaby, BC." justifyContent="left" marginB="10"/>
                     <LandlordInfo />
                     <VeriCont>
                         <LandlordInfo src="/icons/icon_verification.png" text="Email address"/>

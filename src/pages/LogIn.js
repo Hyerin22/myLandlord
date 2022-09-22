@@ -4,7 +4,6 @@ import {useRouter} from 'next/router'
 
 // ============ Imported Comps ============== //
 import Header from '../comps/Header';
-import Button from '../comps/Button';
 import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
 import Input from '../comps/Input';

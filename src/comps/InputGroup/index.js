@@ -203,6 +203,9 @@ const InputGroup = ({
             width: "100%",
             padding: "20px",
             boxSizing: "border-box",
+            border: "3px solid #5333ED",
+            borderRadius: "16px"
+            // border: 3px solid #5333ED;
           }}
         />
         <Para

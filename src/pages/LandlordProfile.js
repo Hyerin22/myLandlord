@@ -136,7 +136,7 @@ export default function LandlordProfile() {
           </InfoText>
         </InfoCont>
         <ButtCont>
-          <RoutButton margintop="0" text="Leave Review" routeTo="/Review" />
+          <RoutButton margintop="0" text="Leave Review" routeTo="/LandlordReview" />
         </ButtCont>
 
         {/* // ============ Property information */}

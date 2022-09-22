@@ -22,6 +22,12 @@ const Text = styled.p`
 	margin:0;	
 	white-space: nowrap;
 
+	@media(max-width: 1000px){
+		font-size: 20px;
+		white-space: normal;
+		
+	}
+
 	@media(max-width: 500px){
 		font-size: 16px;
 		white-space: normal;
