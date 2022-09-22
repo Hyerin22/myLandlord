@@ -7,6 +7,7 @@ const SubCont = styled.div`
     justify-content: left;
     align-items: left;
     margin-top: 0px;
+    padding: 4%;
 `;
 
 const Sub = styled.p`
@@ -15,8 +16,14 @@ const Sub = styled.p`
     font-weight:400;
     color: #6E7076;
     margin-top: 0px;
-    margin-left:1%;
     white-space: nowrap;
+
+    @media(max-width: 1000px){
+		font-size: 25px;
+	}
+	@media(max-width: 500px){
+		font-size: 18px;
+	}
 `;
 
 // ============ Function ============== //

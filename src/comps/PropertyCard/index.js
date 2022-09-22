@@ -17,27 +17,44 @@ const Box = styled.div`
 
     @media(max-width:1000px){
         width: 700px;
-        // height: auto;
+    }
+    @media(max-width:500px){
+        width: 350px;
+        height: auto;
     }
 `;
 
 const Cont = styled.div`
-    position: relative;  
     display: flex;
     
+    @media(max-width:500px){
+        justify-content: center;
+        flex-direction: column;
+    }
 `
 const Img = styled.img`
     width: 196px;
     height: 130px;
     margin-left: 4%;
     margin-top: 11%;
+
+    @media(max-width:500px){
+        margin: 25px 0px 0px 0px;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 const TextCont = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: 30px;
-    margin-top: 5%;
+
+    @media(max-width:500px){
+        margin: 0;
+        text-align: center;
+
+    }
 `;
 const BoldText = styled.p`
     font-weight: 600;
@@ -69,27 +86,47 @@ const RegText = styled.p`
 
 const LeftSide = styled.div`
     display:flex;
-    // flex:1;
+    flex:1;
+    
+    @media(max-width:500px){
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 `;
 const RightSide = styled.div`
     display:flex;
-    // flex:1;
+
+    @media(max-width:500px){
+        justify-content: flex-end;
+        margin-top: 10px;
+        padding: 10px;
+    }
 `;
 
 const DateTextCont = styled.div`
     margin-top: 5%;
-    margin-left: 75%;
+
+    @media(max-width:500px){
+        margin: 0;
+    }
 `;
 const DateText = styled.p`
     font-weight: 400;
     font-size: 18px;
     color: #000000;
     margin-bottom: 3px;
+    margin-right: 15px;
     font-family: Heebo, sans-serif;
     white-space: nowrap;
 
-    @media(max-width: 500px){
+    @media(max-width: 1000px){
         font-size: 16px;
+        margin-left: 10px;
+    }
+    @media(max-width: 500px){
+        font-size: 14px;
+        margin: 0;
     }
 `;
 

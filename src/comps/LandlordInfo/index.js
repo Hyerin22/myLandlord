@@ -21,21 +21,28 @@ const Icon = styled.img`
     object-fit: cover;
     margin-right: 20px;
 
+    @media(max-width:1000px){
+        width: 30px;
+    }
+    @media(max-width:500px){
+        width: 25px;
+        margin-right: 10px;
+    }
 `;
 
 const Info = styled.p`
     font-family: Montserrat;
-    font-weight: 600;
+    font-weight: 400;
     color: #000000;
     font-size: 24px;
+    white-space: nowrap;
   
     @media(max-width:1000px){
-        font-size: 20px;
-    }
-    @media(max-width:500px){
         font-size: 18px;
     }
-
+    @media(max-width:500px){
+        font-size: 16px;
+    }
 `;
 
 

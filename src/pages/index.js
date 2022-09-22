@@ -34,7 +34,7 @@ const MidCont = styled.div`
   padding: 0 4% 0 4%;
   box-sizing: border-box;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
@@ -46,12 +46,15 @@ const LeftBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  box-sizing: content-box;
 
-  @media (max-width: 1000px) {
+  // flex: 1;
+
+  @media (max-width: 1200px) {
     margin-bottom: 20px;
   }
 `;
+
 
 const RightBox = styled.div`
   // display: flex;
@@ -98,17 +101,17 @@ const FeatCont = styled.div`
 
 const WelcomeText = styled.p`
   font-family: "Montserrat", sans-serif;
-  font-size: 26px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 600;
   color: #000;
   text-align: center;
-  line-height: 29px;
   margin: 0;
-  overflow-wrap: break-word;
+  white-space: nowrap;
   margin-bottom: 25px;
 
-  @media (max-width: 1000px) {
-    font-weight: 600;
+  @media (max-width: 500px) {
+    font-size: 20px;
+    white-space: normal;
   }
 `;
 
@@ -149,17 +152,15 @@ export default function Home() {
 						routeTo=""
 						cursor="default"                        
 					/> */}
-          <WelcomeText>Welcome! We are a landlord review platform</WelcomeText>
-          <SubHead
-            text="You can write a review for your landlord right now"
-            fontSize="20"
-            lineHeight="39"
-          />
-          <SubHead
-            text="Or check out the review of landlords in BC"
-            fontSize="20"
-            lineHeight="39"
-          />
+            <WelcomeText>Welcome! We are a landlord review platform</WelcomeText>
+            <SubHead
+              text="You can write a review for your landlord right now"
+              lineHeight="39"
+            />
+            <SubHead
+              text="Or check out the review of landlords in BC"
+              lineHeight="39"
+            />
         </LeftBox>
         <RightBox>
           <Mediabox />

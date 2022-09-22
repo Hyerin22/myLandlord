@@ -27,15 +27,20 @@ const Cont = styled.div`
 `;
 
 const HeadCont = styled.div`
+  padding: 4%;  
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
 `;
 
 const ButtCont = styled.div`
   margin-right: 3%;
   z-index: 1;
   margin-top: 10px;
+
+  @media(max-width: 1000px){
+    margin-top: 40px;
+  }
 `;
 
 const ProfCont = styled.div`
@@ -43,6 +48,7 @@ const ProfCont = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   margin-bottom: 70px;
+  margin-top: 30px;
 `;
 
 const InfoCont = styled.div`
@@ -59,6 +65,14 @@ const VeriCont = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 140px;
+
+  @media(max-width: 1000px){
+    margin-top: 80px;
+  }
+  
+  @media(max-width: 500px){
+    margin-top: 30px;
+  }
 `;
 
 const CenterBox = styled.div`
@@ -66,6 +80,11 @@ const CenterBox = styled.div`
   margin-top: 50px;
   justify-content: center;
   align-items: center;
+  padding: 0 4%;
+
+  @media(max-width: 500px){
+    margin-top: 30px;
+  }
 `;
 
 const ReviewCont = styled.div`
@@ -91,11 +110,10 @@ export default function LandlordProfile() {
 
         <LandlordSub />
         <InfoCont>
-          <RetangleAvatar marginTop="2" />
+          <RetangleAvatar />
           <InfoText>
             <SubHead
               text="Burnaby, BC."
-              fontSize="24"
               justifyContent="left"
               marginB="10"
               marginL="3%"
@@ -132,17 +150,21 @@ export default function LandlordProfile() {
 
         {/* // ============ Reviews */}
         <ReviewCont>
-                <ProfileSub text="Reviews"/>
-                <CenterBox>
-                    <ReviewCard review="The house was newly renovated, and the landlord cared about many things such as electricity and water tanks."/>
-                </CenterBox>
-                <CenterBox>
-                    <ReviewCard text="SY" name="Sonia Yepez" />
-                </CenterBox>
-                <CenterBox>
-                    <ReviewCard text="CC" name="Corey Conyers" review="The house was quite old, but it was good that the landlord was not too involved in my life." />
-                </CenterBox>
-            </ReviewCont>
+          <ProfileSub text="Reviews" />
+          <CenterBox>
+            <ReviewCard review="The house was newly renovated, and the landlord cared about many things such as electricity and water tanks." />
+          </CenterBox>
+          <CenterBox>
+            <ReviewCard text="SY" name="Sonia Yepez" />
+          </CenterBox>
+          <CenterBox>
+            <ReviewCard
+              text="CC"
+              name="Corey Conyers"
+              review="The house was quite old, but it was good that the landlord was not too involved in my life."
+            />
+          </CenterBox>
+        </ReviewCont>
       </div>
 
       {/* // ============ Footer Navigation */}

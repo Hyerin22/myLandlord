@@ -14,13 +14,18 @@ const HeaderCont = styled.div`
 
 const Text = styled.p`
 	font-family: 'Montserrat', sans-serif;
-	font-size: ${props=>props.fontSize}px;
+	font-size: 25px;
 	font-weight: ${props=>props.fontWeight};
 	color: ${props=>props.fcolor};	
 	text-align: ${props=>props.align};
 	line-height: ${props=>props.lineHeight}px;
 	margin:0;	
-	overflow-wrap: break-word;
+	white-space: nowrap;
+
+	@media(max-width: 500px){
+		font-size: 16px;
+		white-space: normal;
+	}
 `;
 
 // ============ Function ============== //
@@ -32,8 +37,7 @@ const Subhead = ({
 	marginL = "",
 	text="Log In",
 	cpadding ="",
-	fontSize= 32,
-	fontWeight = 500,
+	fontWeight = 400,
 	fcolor="#000",
 	align="center",
 	lineHeight = "",
@@ -51,7 +55,6 @@ const Subhead = ({
 			marginL={marginL}
 		>
 			<Text 
-				fontSize={fontSize}
 				fontWeight={fontWeight}
 				fcolor={fcolor}
 				align={align}

@@ -44,9 +44,13 @@ const ButtonText = styled.p`
     font-size: 24px;
     text-align:center;
     font-weight: ${props=>props.fontWeight};
-
+    white-space: nowrap;
+    
     @media(max-width:1000px){
         font-size: 20px;
+    }
+    @media(max-width:500px){
+        font-size: 14px;
     }
 `;
 
@@ -63,7 +67,7 @@ const RoutButton = ({
     routeTo = "/LogIn",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
     color="#000",
-    fontWeight="500",
+    fontWeight="400",
     justify="center"
 
 }) => {

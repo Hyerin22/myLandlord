@@ -123,7 +123,7 @@ export default function LandlordMypage() {
             </HeadCont>
             <LandlordSub/>
             <InfoCont>
-                <RetangleAvatar marginTop = "2"/>
+                <RetangleAvatar/>
                 <InfoText>
                     <SubHead text="Burnaby, BC." fontSize="24" justifyContent="left" marginB="10"/>
                     <LandlordInfo />

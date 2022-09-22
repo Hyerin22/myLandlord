@@ -47,7 +47,6 @@ const Text = styled.p`
   color: #000;
   text-align: center;
   margin: 0;
-  overflow-wrap: break-word;
   margin-bottom: 30px;
 
   @media(max-width: 1000px){
