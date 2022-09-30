@@ -90,7 +90,7 @@ const Footer = ({}) => {
             <FooterNav routeTo="/" />
             <FooterNav routeTo="/Landlord" text="Landlord" />
             <FooterNav routeTo="/Chat" text="Chat" />
-            <FooterNav routeTo="/ContactUs" text="Contact Us" />
+            <FooterNav routeTo="/ContactUs" text="Contact" />
           </Nav>
         </NavText>
         <LogoPart>

@@ -98,7 +98,7 @@ const NavContact =({
         pColor={pColor}
         beforeWidth={beforeWidth}
       >
-        Contact Us
+        Contact
       </Content>
     </Nav>
   );
