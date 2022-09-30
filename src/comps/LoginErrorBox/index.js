@@ -7,7 +7,7 @@ import SubHead from '../SubHead';
 
 // ============ CSS ============== //
 const ErrorCont = styled.div`
-  width: 25%;
+  width: 350px;
   display:flex;
   flex-direction: column;
   align-items:center;
@@ -17,12 +17,29 @@ const ErrorCont = styled.div`
   padding: 50px 50px;
   background-color: #fff;
   position: absolute;
-  z-index: 100;
-  transition: all 1s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  // transition: all 1s ease-in-out;
+
+  @media (max-width: 1000px){
+    width: 240px;
+    height: 150px;
+  }
+  @media (max-width: 500px) {
+    width: 150px;
+    height: 80px;
+    padding: 40px 40px;
+  }
 `;
 
 const IconCont = styled.div`
-  margin-left: 350px;
+  margin-left: 250px;
+
+  @media (max-width: 500px) {
+    margin-left: 130px;
+  }
 `;
 
 const ButtonInput = styled.button`
@@ -42,6 +59,11 @@ const ButtonInput = styled.button`
         transform: scale(0.95);
         transition-duration: 0.5s;       
     }
+
+    @media (max-width: 500px) {
+      width: 80px;
+      height: 50px;
+    }
 `;
 
 const ButtonText = styled.p`
@@ -50,6 +72,10 @@ const ButtonText = styled.p`
     font-size: ${props=>props.fontSize};
     text-align:center;
     font-weight: ${props=>props.fontWeight};
+
+    @media (max-width: 500px) {
+      font-size: 16px;
+    }
 `;
 
 // ============ Function ============== //
@@ -80,11 +106,11 @@ const LoginErrorBox = ({
         onClick={() => clickHandler()}
       >
         <IconCont>
-          <img src='./icons/icon_close.svg' width={25}/>
+          <img src='./icons/icon_close.svg' width={20}/>
         </IconCont>
         <SubHead 
           text = {errortext}
-          marginB="30"
+          marginB="20"
           fontSize="24"
         />
         
