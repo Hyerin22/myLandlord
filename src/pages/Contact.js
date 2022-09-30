@@ -36,7 +36,7 @@ const InputCont = styled.div`
 
 // ============ Function ============== //
 // ============ Layout
-export default function ContactUs() {
+export default function Contact() {
     
 	function handleClick() {
 		setShowPop(true)	
@@ -57,7 +57,7 @@ export default function ContactUs() {
 
 {/* // ============ Content Start */}
       <InputCont> 
-        <Header text = "Contact Us" marginLeft='4%'/>
+        <Header text = "Contact" marginLeft='4%'/>
         <ErrorCont> 
             {showpop === true && <LoginErrorBox 
                 clickHandler={() => handleClickClose()}				

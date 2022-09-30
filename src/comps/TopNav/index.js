@@ -74,8 +74,8 @@ const TopNav =({
             text="Chat"
           />
           <NavText 
-            routeTo = "/ContactUs"
-            text="Contact Us"
+            routeTo = "/Contact"
+            text="Contact"
           />
         </LeftBar>
 

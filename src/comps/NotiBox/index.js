@@ -116,7 +116,7 @@ const NotiBox = ({
 // ============ Button functions
   onButtonInteract=()=>{},
   routeTo = "/",
-  crouteTo ="/ContactUs",
+  crouteTo ="/Contact",
 }) => {
 
 // ============ Router

@@ -71,18 +71,18 @@ const NavContact =({
 })=>{
   
   const router = useRouter();
-  if(router.pathname === "/ContactUs") 
+  if(router.pathname === "/Contact") 
   {
     return (
       <Nav 
         mright={marginright} 
-        onClick={() => router.push("/ContactUs")}
+        onClick={() => router.push("/Contact")}
       >            
         <Content               
           pColor= "#5333ED"
           beforeWidth = "100%"
         >
-          Contact Us
+          Contact
         </Content>
       </Nav>
     );
@@ -92,7 +92,7 @@ const NavContact =({
   return (
     <Nav 
       mright={marginright} 
-      onClick={() => router.push("/ContactUs")}
+      onClick={() => router.push("/Contact")}
     >            
       <Content               
         pColor={pColor}

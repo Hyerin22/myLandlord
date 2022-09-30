@@ -245,7 +245,7 @@ const SignUpForm = ({
           width = "95%"
           marginright="30"
           minWidth="400"
-          clickHandler="/ContactUs"
+          clickHandler="/Contact"
         />
         <Button 
           text = "Submit"
